@@ -12,6 +12,7 @@ pipeline_root = ''
 with open('config.txt', 'w') as f:
     pipeline_root = f.readline().split('#')[0]
     pipeline_root.strip()
+    f.close()
 
 if os.path.isdir(pipeline_root) == False
     raise RootError('pipeline_root not a valid directory.')
